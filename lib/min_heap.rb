@@ -31,7 +31,7 @@ class MinHeap
     swap(0, @store.length - 1)
     result = @store.pop
     heap_down(0)
-    return result
+    return result.value
 
 
   end
@@ -52,8 +52,8 @@ class MinHeap
   end
 
   # This method returns true if the heap is empty
-  # Time complexity: ?
-  # Space complexity: ?
+  # Time complexity: O(1)
+  # Space complexity: O(1)
   def empty?
     return if @store.empty? 
   end
@@ -63,8 +63,8 @@ class MinHeap
   # This helper method takes an index and
   #  moves it up the heap, if it is less than it's parent node.
   #  It could be **very** helpful for the add method.
-  # Time complexity: ?
-  # Space complexity: ?
+  # Time complexity: O(logn)
+  # Space complexity: O(1)
   def heap_up(index)
     return if index == 0 
     parent_index = (index - 1) / 2

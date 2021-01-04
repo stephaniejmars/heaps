@@ -2,7 +2,7 @@
 
 # This method uses a heap to sort an array.
 # Time Complexity:  O(nlogn)
-# Space Complexity: O(nlogn)
+# Space Complexity: O(1)
 def heapsort(list)
 
   return list if list.length - 1 <= 1
@@ -16,7 +16,7 @@ def heapsort(list)
   result = []
   
   list.length.times do
-    result << heap.remove.value
+    result << heap.remove
   end
 
   return result
